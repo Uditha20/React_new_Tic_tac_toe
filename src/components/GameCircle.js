@@ -3,15 +3,12 @@ import '../Game.css';
 
 
 
-const GameCircle = ({ id, children,color,onCircleClicked}) => {
+const GameCircle = ({ id, children,className,onCircleClicked}) => {
 
-    const style={
-        backgroundColor:color,
-       
-    }
+ 
     return (
         // <div onClick={onClick}>GameCircle children={children}, id={id}</div>
-        <div className="gamecircle" style={style} onClick={() => onCircleClicked(id)}>
+        <div className={`gamecircle ${className}`} onClick={() => onCircleClicked(id)}>
             {children}
         </div>
     )
